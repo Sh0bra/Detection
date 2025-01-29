@@ -11,5 +11,6 @@ index=critical EventCode=1
 | table  _time, ComputerName, ParentUser, CurrentDirectory, CommandLine
 ```
 
-### What is that?
+### What we are filtering out?
 - svchost is an executable that contains lots of DLLs. I chose to filter out these events because it causes a lot of noise. Note that there are malware that ulilize this executable and we will detect these separately when we refine our detection.
+- splunk is what we are using to monitor our devices
